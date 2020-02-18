@@ -6,6 +6,14 @@
 int main()
 {
     std::cout << "Hello World!\n";
+    std::cout << "Hi!\n";
+    std::string helloString = "Heya";
+    std::string endLine = "\n";
+    std::string concatString = helloString + endLine;
+
+    std::cout << helloString << std::endl;
+    
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
