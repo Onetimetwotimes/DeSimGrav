@@ -33,8 +33,8 @@ double Particle::getMass() {
 }
 
 void Particle::setPosition(std::vector<double> p) {
-	if (p.size() > position.size()) {
-		throw std::invalid_argument("Incompatible Dimension");
+	if (p.size() > dimension) {
+		throw std::invalid_argument("Incompatible Dimension, " + std::to_string(dimension) + " and " + std::to_string(p.size()));
 	}
 	for (int i = 0; i < p.size(); i++) {
 		position.at(i) = p.at(i);
@@ -46,8 +46,8 @@ std::vector<double> Particle::getPosition() {
 }
 
 void Particle::setVelocity(std::vector<double> v) {
-	if (v.size() > velocity.size()) {
-		throw std::invalid_argument("Incompatible Dimension");
+	if (v.size() > dimension) {
+		throw std::invalid_argument("Incompatible Dimension, " + std::to_string(dimension) + " and " + std::to_string(v.size()));
 	}
 	for (int i = 0; i < v.size(); i++) {
 		velocity.at(i) = v.at(i);
@@ -59,8 +59,8 @@ std::vector<double> Particle::getVelocity() {
 }
 
 void Particle::setAcceleration(std::vector<double> a) {
-	if (a.size() > acceleration.size()) {
-		throw std::invalid_argument("Incompatible Dimension");
+	if (a.size() > dimension) {
+		throw std::invalid_argument("Incompatible Dimension, " + std::to_string(dimension) + " and " + std::to_string(a.size()));
 	}
 	for (int i = 0; i < a.size(); i++) {
 		acceleration.at(i) = a.at(i);
